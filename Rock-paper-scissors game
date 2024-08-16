@@ -1,0 +1,72 @@
+#import random module
+
+import random
+
+print("welcome to rock,paper,scissor!\n")
+ 
+
+players_win=0
+
+computer_wins=0
+
+while True:
+
+    #select player choice 
+    player=input("enter a choice(rock,paper,scissors):")
+    choices=['rock','paper','scissors']
+
+    computer=random.choice(choices)
+    print(f"\nyou choose{player},computer choose{computer}")
+
+    
+    # To check choice 
+    if player==computer:
+        print(f"both players selected{player}.it is tie!")
+        
+    elif player=='rock':
+        if computer=='scissor':
+            print('rock smashes scissors you win')
+            players_win+=1
+
+        else:
+
+            print('paper cover rock you lose')
+            computer_wins+=1
+
+    elif player=='paper':
+        if computer=='rock':
+            print('paper covers rock you win!')
+            players_win=+1
+
+    elif player=='scissors':
+        if computer=='paper':
+            print('scissors cuts paper you win!')
+            players_win+=1
+
+        else:
+            print('rock smaches scissor you lose.')
+            computer_wins+=1
+
+
+print('you have'+str(players_win)+'wins')
+print('the computer has'+str(computer_wins)+'wins')
+
+#take input from user
+repeat=input("\nplay again?(yes/no):")  
+
+
+
+if repeat.lower()!='yes':
+    print('thanks for playing!')
+
+OUTPUT:
+PS C:\Users\HP\OneDrive\Desktop\python_pr> & C:/Users/HP/AppData/Local/Programs/Python/Python312/python.exe c:/Users/HP/OneDrive/Desktop/python_pr/calci.py
+select operation
+1.Add
+2.Sub
+3.Mul
+4.divide
+enter choice(1/2/3/4):1
+enter first num:3
+enter second num5
+3.0+5.0=8.0
